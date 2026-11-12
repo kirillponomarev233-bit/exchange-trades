@@ -114,6 +114,7 @@ def fetch_range(date_from: date, date_to: date, lang="ru", session=None, log=pri
                   "page": page, "lang": lang}
         resp = s.get(URL, params=params, headers=HEADERS, timeout=30)
         resp.raise_for_status()
+        resp.encoding = "utf-8"                   # не полагаемся на угадывание кодировки
         trades, totals = parse_html(resp.text)
         sig = tuple(t["dedup_hash"] for t in trades)
         if not trades and not totals:

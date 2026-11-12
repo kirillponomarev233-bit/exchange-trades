@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Итоги торгов ETS и Каспий</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --bg:#f5f6f8; --card:#fff; --ink:#1d2433; --muted:#667085; --line:#e3e6ec;
+          --accent:#1f5eff; --accent-ink:#fff; --ok:#12805c; --bad:#c0362c; --row:#f9fafc; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 system-ui, "Segoe UI", Roboto, sans-serif; }
+  header { background:var(--card); border-bottom:1px solid var(--line); padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  h1 { font-size:18px; margin:0; font-weight:650; }
+  nav { display:flex; gap:4px; }
+  nav button { border:0; background:none; padding:8px 14px; border-radius:8px; font:inherit; cursor:pointer; color:var(--muted); }
+  nav button.active { background:#e8eefc; color:var(--accent); font-weight:600; }
+  main { padding:20px 24px; max-width:1700px; margin:0 auto; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:16px; }
+  .filters { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:12px; }
+  label { display:flex; flex-direction:column; gap:4px; font-size:12px; color:var(--muted); }
+  input, select { font:inherit; color:var(--ink); padding:7px 9px; border:1px solid var(--line); border-radius:8px; background:#fff; min-width:0; }
+  input:focus, select:focus { outline:2px solid #bcd0ff; border-color:var(--accent); }
+  .actions { display:flex; gap:8px; align-items:end; }
+  .btn { white-space:nowrap; font:inherit; padding:7px 14px; border-radius:8px; border:1px solid var(--line); background:#fff; cursor:pointer; text-decoration:none; color:var(--ink); }
+  .btn.primary { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .summary { display:flex; justify-content:space-between; align-items:center; margin:0 0 10px; color:var(--muted); }
+  .summary b { color:var(--ink); }
+  .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:var(--card); }
+  table { border-collapse:collapse; width:100%; min-width:1200px; }
+  th, td { padding:9px 12px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { position:sticky; top:0; background:#f0f2f7; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); cursor:pointer; white-space:nowrap; user-select:none; }
+  th.sorted { color:var(--accent); }
+  th .arrow { margin-left:4px; }
+  tbody tr:nth-child(even) { background:var(--row); }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  td.nowrap { white-space:nowrap; }
+  .clamp { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; max-width:420px; }
+  .small { font-size:12px; color:var(--muted); }
+  .tag { display:inline-block; padding:1px 8px; border-radius:99px; font-size:12px; font-weight:600; }
+  .tag.ETS { background:#e6f3ff; color:#0b5cad; } .tag.CCX { background:#fff0dd; color:#a85a00; }
+  .pager { display:flex; gap:6px; align-items:center; justify-content:center; padding:14px 0; flex-wrap:wrap; }
+  .pager button { min-width:34px; }
+  .pager button[disabled] { opacity:.45; cursor:default; }
+  .pager .cur { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .empty { text-align:center; color:var(--muted); padding:40px; }
+  .grid2 { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:16px; }
+  .kv { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; margin-top:10px; }
+  .kv div:nth-child(odd) { color:var(--muted); }
+  .ok { color:var(--ok); font-weight:600; } .bad { color:var(--bad); font-weight:600; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Итоги торгов: ETS и Каспий</h1>
+  <nav>
+    <button id="tab-trades" class="active">Сделки</button>
+    <button id="tab-status">Состояние данных</button>
+  </nav>
+</header>
+
+<main>
+<section id="view-trades">
+  <div class="card">
+    <form id="filters" class="filters" autocomplete="off">
+      <label>Биржа
+        <select name="exchange">
+          <option value="">Обе</option><option value="ETS">ETS</option><option value="CCX">Каспий</option>
+        </select></label>
+      <label>Дата от <input type="date" name="date_from"></label>
+      <label>Дата до <input type="date" name="date_to"></label>
+      <label>Товар или ключевое слово <input type="text" name="product" placeholder="уголь, бензин, 2701"></label>
+      <label>Продавец / покупатель (название или БИН) <input type="text" name="participant" placeholder="Каражыра или 021240000409"></label>
+      <label>Брокер <input type="text" name="broker" placeholder="название брокера"></label>
+      <label>Сумма сделки от, тг <input type="number" name="amount_min" min="0" step="any"></label>
+      <label>Сумма сделки до, тг <input type="number" name="amount_max" min="0" step="any"></label>
+      <label>Место / условия поставки <input type="text" name="delivery" placeholder="EXW, FCA, ст. Текесу"></label>
+      <div class="actions">
+        <button type="button" class="btn" id="clear-filters">Сбросить</button>
+        <a class="btn" id="export" href="#">Скачать Excel</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="summary"><div id="summary">Загрузка…</div><div id="per-page-box">
+    Строк на странице
+    <select id="page-size"><option>25</option><option selected>50</option><option>100</option><option>200</option></select></div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr id="head"></tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+  <div class="pager" id="pager"></div>
+</section>
+
+<section id="view-status" class="hidden">
+  <div class="grid2" id="status-cards"></div>
+  <h2 style="font-size:15px; margin:24px 0 8px">Журнал запусков парсеров</h2>
+  <div class="table-wrap"><table style="min-width:900px">
+    <thead><tr><th>№</th><th>Начало</th><th>Источник</th><th>Период</th><th class="num">Добавлено</th><th class="num">Пропущено (дубли)</th><th>Статус</th><th>Сообщение</th></tr></thead>
+    <tbody id="runs"></tbody>
+  </table></div>
+</section>
+</main>
+
+<script>
+"use strict";
+const COLS = [
+  {key:"date", title:"Дата", cls:"nowrap"},
+  {key:"exchange", title:"Биржа"},
+  {key:"product", title:"Товар"},
+  {key:"buyer", title:"Покупатель"},
+  {key:"seller", title:"Продавец"},
+  {key:"buyer_broker", title:"Брокер покупателя"},
+  {key:"seller_broker", title:"Брокер продавца"},
+  {key:"deals", title:"Сделок", num:true},
+  {key:"price_avg", title:"Ср. цена, тг", num:true},
+  {key:"amount", title:"Сумма, тг", num:true},
+  {key:"terms", title:"Поставка"},
+];
+const FIELDS = ["exchange","date_from","date_to","product","participant","broker","amount_min","amount_max","delivery"];
+const state = {sort:"date", order:"desc", page:1, pageSize:50};
+const $ = id => document.getElementById(id);
+const fmtMoney = v => v == null ? "—" : Number(v).toLocaleString("ru-RU", {minimumFractionDigits:2, maximumFractionDigits:2});
+const fmtInt = v => Number(v).toLocaleString("ru-RU");
+const fmtDate = s => s ? s.split("-").reverse().join(".") : "—";
+const fmtTime = s => s ? s.replace("T", " ") : "—";
+const exName = c => c === "CCX" ? "Каспий" : c;
+
+function el(tag, props = {}, text) {
+  const e = document.createElement(tag);
+  Object.assign(e, props);
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function filterParams() {
+  const p = new URLSearchParams();
+  const form = $("filters");
+  for (const f of FIELDS) {
+    const v = form.elements[f].value.trim();
+    if (v) p.set(f, v);
+  }
+  return p;
+}
+
+function buildHead() {
+  const tr = $("head");
+  tr.replaceChildren();
+  for (const c of COLS) {
+    const th = el("th", {className: (c.num ? "num " : "") + (state.sort === c.key ? "sorted" : "")}, c.title);
+    if (state.sort === c.key) th.append(el("span", {className:"arrow"}, state.order === "asc" ? "▲" : "▼"));
+    th.onclick = () => {
+      if (state.sort === c.key) state.order = state.order === "asc" ? "desc" : "asc";
+      else { state.sort = c.key; state.order = c.key === "date" || c.num ? "desc" : "asc"; }
+      state.page = 1; load();
+    };
+    tr.append(th);
+  }
+}
+
+let seq = 0;
+async function load() {
+  const my = ++seq;                       // защита от «опоздавших» ответов
+  const p = filterParams();
+  p.set("sort", state.sort); p.set("order", state.order);
+  p.set("page", state.page); p.set("page_size", state.pageSize);
+  buildHead();
+  const ex = filterParams(); ex.set("sort", state.sort); ex.set("order", state.order);
+  $("export").href = "/api/export.xlsx?" + ex.toString();
+  try {
+    const r = await fetch("/api/trades?" + p.toString());
+    if (!r.ok) throw new Error("Ошибка сервера: " + r.status);
+    const d = await r.json();
+    if (my !== seq) return;
+    render(d);
+  } catch (e) {
+    $("summary").textContent = "Не удалось загрузить данные: " + e.message;
+  }
+}
+
+function render(d) {
+  const sum = $("summary");
+  sum.replaceChildren(document.createTextNode("Найдено записей: "), el("b", {}, fmtInt(d.total)),
+                      document.createTextNode(" на сумму "), el("b", {}, fmtMoney(d.amount_sum) + " тг"));
+  const body = $("body");
+  body.replaceChildren();
+  if (!d.rows.length) {
+    const tr = el("tr"); const td = el("td", {className:"empty", colSpan:COLS.length}, "Ничего не найдено. Измените фильтры.");
+    tr.append(td); body.append(tr);
+  }
+  for (const r of d.rows) {
+    const tr = el("tr");
+    for (const c of COLS) {
+      const td = el("td", {className: (c.num ? "num " : "") + (c.cls || "")});
+      if (c.key === "date") td.textContent = fmtDate(r.date);
+      else if (c.key === "exchange") td.append(el("span", {className:"tag " + r.exchange}, exName(r.exchange)));
+      else if (c.key === "product") {
+        td.append(el("div", {className:"clamp", title:r.product || ""}, r.product || "—"));
+        if (r.tnved) td.append(el("div", {className:"small"}, "ТН ВЭД " + r.tnved));
+      }
+      else if (c.key === "buyer" || c.key === "seller") {
+        td.append(el("div", {}, r[c.key] || "—"));
+        const bin = r[c.key + "_bin"];
+        if (bin) td.append(el("div", {className:"small"}, "БИН " + bin));
+      }
+      else if (c.key === "amount" || c.key === "price_avg") td.textContent = fmtMoney(r[c.key]);
+      else td.textContent = r[c.key] == null || r[c.key] === "" ? "—" : r[c.key];
+      tr.append(td);
+    }
+    body.append(tr);
+  }
+  renderPager(d.page, d.pages);
+}
+
+function renderPager(page, pages) {
+  const pg = $("pager");
+  pg.replaceChildren();
+  const btn = (label, target, extra = "") => {
+    const b = el("button", {className:"btn " + extra, type:"button"}, label);
+    if (target == null || target === page && !extra) b.disabled = true;
+    b.onclick = () => { state.page = target; load(); window.scrollTo({top:0}); };
+    return b;
+  };
+  pg.append(btn("‹ Назад", page > 1 ? page - 1 : null));
+  const show = new Set([1, pages, page - 2, page - 1, page, page + 1, page + 2]);
+  let prev = 0;
+  for (const n of [...show].filter(n => n >= 1 && n <= pages).sort((a, b) => a - b)) {
+    if (n - prev > 1) pg.append(el("span", {className:"small"}, "…"));
+    pg.append(btn(String(n), n, n === page ? "cur" : ""));
+    prev = n;
+  }
+  pg.append(btn("Вперёд ›", page < pages ? page + 1 : null));
+}
+
+// --- фильтры обновляют таблицу без перезагрузки страницы ---
+let timer;
+const apply = () => { state.page = 1; load(); };
+$("filters").addEventListener("input", e => {
+  clearTimeout(timer);
+  timer = setTimeout(apply, e.target.tagName === "INPUT" && e.target.type === "text" ? 350 : 0);
+});
+$("filters").addEventListener("submit", e => e.preventDefault());
+$("clear-filters").onclick = () => { $("filters").reset(); apply(); };
+$("page-size").onchange = e => { state.pageSize = +e.target.value; apply(); };
+
+// --- вкладки ---
+function show(tab) {
+  $("view-trades").classList.toggle("hidden", tab !== "trades");
+  $("view-status").classList.toggle("hidden", tab !== "status");
+  $("tab-trades").classList.toggle("active", tab === "trades");
+  $("tab-status").classList.toggle("active", tab === "status");
+  if (tab === "status") loadStatus();
+}
+$("tab-trades").onclick = () => show("trades");
+$("tab-status").onclick = () => show("status");
+
+async function loadStatus() {
+  const cards = $("status-cards"), runs = $("runs");
+  try {
+    const r = await fetch("/api/status");
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    cards.replaceChildren();
+    const total = el("div", {className:"card"});
+    total.append(el("h3", {style:"margin:0"}, "Всего записей в базе"), el("div", {style:"font-size:28px; font-weight:650; margin-top:6px"}, fmtInt(d.total_records)));
+    cards.append(total);
+    for (const x of d.exchanges) {
+      const c = el("div", {className:"card"});
+      c.append(el("h3", {style:"margin:0"}, x.name || x.code));
+      const kv = el("div", {className:"kv"});
+      const lr = x.last_run;
+      const rows = [
+        ["Последняя дата торгов", fmtDate(x.last_date)],
+        ["Первая дата в базе", fmtDate(x.first_date)],
+        ["Записей", fmtInt(x.records)],
+        ["Сумма сделок", fmtMoney(x.amount) + " тг"],
+        ["Последний запуск", lr ? fmtTime(lr.finished_at || lr.started_at) : "ещё не запускался"],
+      ];
+      for (const [k, v] of rows) { kv.append(el("div", {}, k), el("div", {}, v)); }
+      if (lr) {
+        kv.append(el("div", {}, "Результат"),
+                  el("div", {className: lr.status === "ok" ? "ok" : "bad"},
+                     ({ok: "успешно", warning: "с предупреждением", error: "ошибка"}[lr.status] || lr.status) + " · добавлено " + lr.added + ", дублей " + lr.skipped));
+        if (lr.message) kv.append(el("div", {}, "Сообщение"), el("div", {className:"bad"}, lr.message));
+      }
+      c.append(kv); cards.append(c);
+    }
+    runs.replaceChildren();
+    for (const x of d.runs) {
+      const tr = el("tr");
+      for (const v of [x.id, fmtTime(x.started_at), exName(x.source), x.period || "—"]) tr.append(el("td", {}, v));
+      tr.append(el("td", {className:"num"}, x.added), el("td", {className:"num"}, x.skipped));
+      tr.append(el("td", {className: x.status === "ok" ? "ok" : "bad"}, x.status));
+      tr.append(el("td", {}, x.message || ""));
+      runs.append(tr);
+    }
+  } catch (e) {
+    cards.replaceChildren(el("div", {className:"card bad"}, "Не удалось получить состояние данных: " + e.message));
+  }
+}
+
+load();
+</script>
+</body>
+</html>

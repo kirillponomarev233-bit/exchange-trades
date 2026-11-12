@@ -187,8 +187,10 @@ def log_run(conn, source, period, fn):
     run_id = cur.lastrowid
     conn.commit()
     try:
-        added, skipped = fn()
-        status, msg = "ok", None
+        result = fn()
+        added, skipped = result[0], result[1]
+        msg = result[2] if len(result) > 2 else None
+        status = "warning" if msg else "ok"     # warning: часть данных не обработана, остальное сохранено
     except Exception as e:                      # ошибка не должна терять уже собранное
         conn.rollback()
         added = skipped = 0

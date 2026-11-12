@@ -1,0 +1,50 @@
+{
+  "source_file": "02.09.2026 САУДА-САТТЫҚ НӘТИЖЕЛЕРІ_ ИТОГИ ТОРГОВ.xlsx",
+  "reports": [
+    {
+      "sheet": "02.09",
+      "report_date": "02.09.2026",
+      "deal_count_rows": 2,
+      "total_deals": 2,
+      "total_amount": 41298163.4,
+      "deals": [
+        {
+          "buyer_name": "АЗК АЛМАЗ ТОО",
+          "buyer_bin": "011240001881",
+          "buyer_broker": "Ак Алтын Ко ТОО",
+          "seller_name": "ТОО \"Exploration Production Crystal Management\"",
+          "seller_bin": "181240012513",
+          "seller_broker": "FB Capital ТОО",
+          "product_name": "BENZIN AI-92 too PKOP, FCA St. Tekesu, set tolko z / D Transport/Бензин АИ-92 ТОО ПКОП, FCA ст. Текесу, поставка только ж/д транспортом",
+          "tn_ved_code": "2710124130",
+          "product_code": "D3DE1TO",
+          "deal_count": 1,
+          "opening_price": 236038.19,
+          "closing_price": 236038.19,
+          "max_deal_price": 236038.19,
+          "min_deal_price": 236038.19,
+          "weighted_average_price": 236038.19,
+          "total_amount": 15342482.35
+        },
+        {
+          "buyer_name": "ТОО Business-Jet fuel",
+          "buyer_bin": "211240025048",
+          "buyer_broker": "Брокер Стандарт Плюс ТОО",
+          "seller_name": "ТОО IC Products",
+          "seller_bin": "250840004567",
+          "seller_broker": "FB Capital ТОО",
+          "product_name": "TC-1 reaktivti qozgaltqyshtarynaarnalganotyn, AMOZ JSHS, FCA, tendik stansiasy, t / j jetkizy/Топливо для реактив двиг TC-1, ТОО АНПЗ, FCA, СТ. ТЕНДЫК, поставка ж/д",
+          "tn_ved_code": "2710 19 210 0",
+          "product_code": "DTDFCEA",
+          "deal_count": 1,
+          "opening_price": 399318.17,
+          "closing_price": 399318.17,
+          "max_deal_price": 399318.17,
+          "min_deal_price": 399318.17,
+          "weighted_average_price": 399318.17,
+          "total_amount": 25955681.05
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3054 @@
+<!DOCTYPE html>
+<html lang="kz">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCX - Каспий Тауар Биржасы</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,400..700&display=swap" rel="stylesheet">
+        <link rel="icon" href="/cropped-favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/cropped-favicon-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/cropped-favicon-180x180.png" />
+        <meta name="msapplication-TileImage" content="/cropped-favicon-270x270.png" />
+        <meta name="csrf-token" content="N3GDFXX8zUYCCH9u1dSQgM6Q10pAGquwN373MOVb">
+        <link rel="preload" as="style" href="https://ccx.kz/build/assets/style-DHEYPI58.css" /><link rel="stylesheet" href="https://ccx.kz/build/assets/style-DHEYPI58.css" />        <link rel="modulepreload" href="https://ccx.kz/build/assets/app-BZ_IZGUn.js" /><script type="module" src="https://ccx.kz/build/assets/app-BZ_IZGUn.js"></script>                <script src="https://code.highcharts.com/highcharts.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+    </head>
+    <body>
+    <header class="header">
+    <div class="header__inner container">
+        <a href="/" class="header__logo logo">
+            <img class="logo__image"
+                 src="https://ccx.kz/images/CCX.png" width="156" height="52" alt="CCX" loading="lazy">
+        </a>
+
+        <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="https://ccx.kz/about/information" class="header__menu-link header__menu-link--bold">Биржа туралы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://ccx.kz/membership/members-of-the-exchange" class="header__menu-link header__menu-link--bold">Биржа мүшелері</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://ccx.kz/membership/tariffs" class="header__menu-link header__menu-link--bold">Тарифтер</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://ccx.kz/membership/where-to-start" class="header__menu-link header__menu-link--bold">Қатысушы болу</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://ccx.kz/news/category/announcement" class="header__menu-link header__menu-link--bold">Хабарландырулар</a>
+                </li>
+                <li class="header__menu-item header__menu-item--with-icon">
+                    <i style="min-width: 16px; min-height: 16px; font-size: 16px; line-height: 16px" class="icon icon-document "></i>
+                    <a href="https://ccx.kz/trading-and-analytics/trading-results" class="header__menu-link header__menu-link--bold">Сауда қорытындылары</a>
+                </li>
+                <li class="header__menu-item header__menu-item--with-icon">
+                    <i style="min-width: 16px; min-height: 16px; font-size: 16px; line-height: 16px" class="icon icon-headset "></i>
+                    <a href="https://ccx.kz/support/contact" class="header__menu-link header__menu-link--bold">Қолдау</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__tools hidden-mobile">
+            <ul class="header__tools-list">
+                                <li class="header__tools-item">
+                    <span class="currency"><strong>USD: </strong>454</span>
+                </li>
+                <li class="header__tools-item">
+                    <span class="currency"><strong>EUR: </strong>508</span>
+                </li>
+                <li class="header__tools-item">
+                    <span class="currency"><strong>RUB: </strong>5.65</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__actions">
+            <div class="header__actions-language">
+                <div class="language-dropdown ">
+    
+    <input type="checkbox" id="toggle-lang-header" class="toggle-checkbox">
+    <label for="toggle-lang-header" class="language-selected">
+        <i style="min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-earth "></i>
+        <span class="lang-code">KZ</span>
+        <i style="min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-sort-down arrow"></i>
+    </label>
+
+    <ul class="language-options">
+                                    <li><a href="https://ccx.kz/trading-and-analytics/trading-results?date_from=2026-09-01&amp;date_to=2026-09-02&amp;page=1&amp;lang=ru">RU</a></li>
+                                                <li><a href="https://ccx.kz/trading-and-analytics/trading-results?date_from=2026-09-01&amp;date_to=2026-09-02&amp;page=1&amp;lang=en">EN</a></li>
+                                            </ul>
+</div>
+            </div>
+
+            <a href="https://trade.ccx.kz/auth" class="header__terminal-link">
+                <i style="min-width: 16px; min-height: 16px; font-size: 16px; line-height: 16px" class="icon icon-right-bracket "></i>
+                <span class="hidden-mobile">Сауда терминалы</span>
+                <span class="visible-mobile">Терминал</span>
+            </a>
+        </div>
+    </div>
+</header>
+    <div class="nav is-sticky" id="mainNav">
+    <div class="nav__inner container">
+        <div class="nav__menu hidden-mobile">
+            <ul class="nav__menu-list">
+                <li class="nav__menu-button" id="menuToggleWrapper">
+                    <a href="javascript:void(0)" id="menuToggle" onclick="return false;">
+                        <img class="nav__logo" src="https://ccx.kz/images/menu.svg" width="28" height="28" alt="CCX">
+                    </a>
+                </li>
+
+                <li class="nav__menu-item" id="gsmTrigger">
+                    <i style="min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-gas-pump "></i>
+                    <a href="#" class="nav__menu-link">ЖЖМ</a>
+                </li>
+                <li class="nav__menu-item" id="coalTrigger">
+                    <i style="min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-coal icon"></i>
+                    <a href="#" class="nav__menu-link">Көмір</a>
+                </li>
+                <li class="nav__menu-item" id="cementTrigger">
+                    <i style="min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-cement "></i>
+                    <a href="#" class="nav__menu-link">Цемент</a>
+                </li>
+                <li class="nav__menu-item">
+                    <i style="min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-cubes "></i>
+                    <a href="https://ccx.kz/sugar" class="nav__menu-link">Қант</a>
+                </li>
+
+
+
+
+
+
+
+
+                <li class="nav__menu-item">
+                    <i style="min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-briefcase "></i>
+                    <a href="https://ccx.kz/corporate-procurement" class="nav__menu-link">Корп-лық сатып алу</a>
+                </li>
+
+                
+                <li class="nav__menu-item nav__menu-item--calendar" id="headerCalendarWrap">
+                    <i class="icon icon-calendar-schedule"
+                       style="min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px"></i>
+                    <span class="header__calendar-badge" id="calendarBadge" style="display:none;"
+                          aria-label="Бүгін сауда-саттық бар"></span>
+                    <a href="javascript:void(0)" class="nav__menu-link" id="calendarNavLink">Сауда-саттық күнтізбесі</a>
+
+                    <div class="header__calendar-dropdown" id="calendarDropdown"
+                         role="dialog" aria-label="Сауда-саттық күнтізбесі">
+                        <button type="button"
+                                class="mini-cal__close close-modal"
+                                id="miniCalClose"
+                                aria-label="Жабу">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </button>
+                        <div class="mini-cal">
+                            <div class="mini-cal__nav">
+                                <button class="mini-cal__nav-btn" id="miniCalPrev" aria-label="Өткен ай">
+                                    <svg width="6" height="11" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </button>
+                                <span class="mini-cal__title" id="miniCalTitle"></span>
+                                <button class="mini-cal__nav-btn" id="miniCalNext" aria-label="Келесі ай">
+                                    <svg width="6" height="11" viewBox="0 0 8 14" fill="none"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+                            <div class="mini-cal__weekdays">
+                                                                    <div class="mini-cal__weekday">Пн</div>
+                                                                    <div class="mini-cal__weekday">Вт</div>
+                                                                    <div class="mini-cal__weekday">Ср</div>
+                                                                    <div class="mini-cal__weekday">Чт</div>
+                                                                    <div class="mini-cal__weekday">Пт</div>
+                                                                    <div class="mini-cal__weekday">Сб</div>
+                                                                    <div class="mini-cal__weekday">Вс</div>
+                                                            </div>
+                            <div class="mini-cal__grid" id="miniCalGrid">
+                                <div class="mini-cal__loading">
+                                    <svg class="cal-widget__spinner" viewBox="0 0 24 24" fill="none" width="20" height="20">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-dasharray="60" stroke-dashoffset="20"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mini-cal__today-sessions" id="miniCalTodaySessions" style="display:none;">
+                                <div class="mini-cal__today-header">
+                                    <p class="mini-cal__today-label">Бүгін</p>
+                                    <span class="mini-cal__today-page" id="miniCalTodayPage"></span>
+                                </div>
+                                <div class="mini-cal__today-pager">
+                                    <button type="button" class="mini-cal__today-nav" id="miniCalTodayPrev"
+                                            aria-label="Алдыңғылар" disabled>
+                                        <svg width="6" height="11" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </button>
+                                    <div class="mini-cal__today-list" id="miniCalTodayList"></div>
+                                    <button type="button" class="mini-cal__today-nav" id="miniCalTodayNext"
+                                            aria-label="Келесілер" disabled>
+                                        <svg width="6" height="11" viewBox="0 0 8 14" fill="none"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="https://ccx.kz/schedule" class="mini-cal__full-link">
+                                Толық күнтізбе →
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="nav-mobile visible-mobile">
+    <ul class="nav-mobile__menu-list">
+        <li class="nav-mobile__menu-item">
+            <a href="https://ccx.kz/news/category/announcement" class="nav-mobile__menu-link">
+                <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-cubes icon"></i>
+                Жаңалықтар</a>
+        </li>
+        <li class="nav-mobile__menu-item">
+            <a href="https://ccx.kz/trading-and-analytics/trading-results" class="nav-mobile__menu-link">
+                <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-cubes icon"></i>
+                Сауда-саттық</a>
+        </li>
+        <li class="nav-mobile__menu-item">
+            <a href="https://ccx.kz/support/contact" class="nav-mobile__menu-link">
+                <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-briefcase icon"></i>
+                Қолдау</a>
+        </li>
+        <li class="nav-mobile__menu-item">
+            <a href="#" id="mobileOverlayToggle" class="nav-mobile__menu-link">
+                <img class="icon" src="https://ccx.kz/images/menu.svg" width="24" height="24" alt="CCX">
+                Мәзір
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="menu-container" id="menuContainer">
+    <div class="container">
+        <div class="menu-container-inner">
+            <div class="menu-container--wrapper">
+                <ul class="menu-container--wrapper-links">
+                    <li><a href="#" class="menu-container--wrapper-link active" data-menu="about">Биржа туралы</a></li>
+                    <li><a href="#" class="menu-container--wrapper-link" data-menu="membership">Клиенттер үшін</a></li>
+                    <li><a href="#" class="menu-container--wrapper-link" data-menu="support">Қолдау</a></li>
+                    <li><a href="#" class="menu-container--wrapper-link" data-menu="news">Жаңалықтар</a></li>
+                    <li><a href="#" class="menu-container--wrapper-link" data-menu="trading">Сауда және аналитика</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-dynamic" data-section="about">
+                <div class="menu-wrapper">
+    <div class="menu-container--subwrapper">
+        <ul class="menu-container--subwrapper-links">
+            <li>
+                <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+            </li>
+            <li>
+                <a href="https://ccx.kz/about/information" class="menu-container--subwrapper-link" data-submenu="submenu-info">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Ақпарат</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ccx.kz/about/corporate-governance" class="menu-container--subwrapper-link" data-submenu="submenu-corporate">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Корпоративтік басқару</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ccx.kz/about/documentation" class="menu-container--subwrapper-link" data-submenu="submenu-docs">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Құжаттама</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ccx.kz/about/stock-market-arbitrage" class="menu-container--subwrapper-link" data-submenu="submenu-arbitrage">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Биржалық арбитраж</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-container--subwrapper submenu-wrapper">
+        <ul class="submenu active" id="submenu-info">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/about/information#about_company">Компания туралы</a></li>
+            <li><a href="https://ccx.kz/about/information#achievements_for_the_year">Жетістіктер</a></li>
+            <li><a href="https://ccx.kz/about/information#management">Басшылық</a></li>
+            <li><a href="https://ccx.kz/about/information#directors">Директорлар кеңесі</a></li>
+            <li><a href="https://ccx.kz/about/information#committees">Комитеттер</a></li>
+        </ul>
+
+
+        <ul class="submenu" id="submenu-corporate">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/about/corporate-governance#sustainable_development">Тұрақты даму</a></li>
+            <li><a href="https://ccx.kz/about/corporate-governance#disclosure_of_information">Ақпаратты жария ету</a></li>
+            <li><a href="https://ccx.kz/about/corporate-governance#digitalization">Цифрландыру</a></li>
+        </ul>
+
+        <ul class="submenu" id="submenu-docs">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/about/documentation#stock_market_documents">Биржа құжаттары</a></li>
+            <li><a href="https://ccx.kz/about/documentation#regulatory_framework">Нормативтік-құқықтық база</a></li>
+        </ul>
+
+        <ul class="submenu" id="submenu-arbitrage">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/about/stock-market-arbitrage#documentation">Құжаттама</a></li>
+            <li><a href="https://ccx.kz/about/stock-market-arbitrage#account_for_payment">Төлемдерді төлеуге арналған шот</a></li>
+        </ul>
+    </div>
+
+</div>
+            </div>
+            <div class="menu-dynamic" data-section="membership" style="display:none;">
+                <div class="menu-wrapper">
+    <div class="menu-container--subwrapper">
+        <ul class="menu-container--subwrapper-links">
+            <li>
+                <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+            </li>
+            <li>
+                <a href="https://ccx.kz/membership/members-of-the-exchange" class="menu-container--subwrapper-link" data-submenu="submenu-members">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Биржа мүшелері</span>
+                </a>
+            </li>
+
+
+
+
+
+
+            <li>
+                <a href="https://ccx.kz/membership/tariffs" class="menu-container--subwrapper-link" data-submenu="submenu-tariffs">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Тарифтер</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ccx.kz/membership/where-to-start" class="menu-container--subwrapper-link" data-submenu="submenu-how-to-start">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Қатысушы болу</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-container--subwrapper submenu-wrapper">
+        <ul class="submenu active" id="submenu-members">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/membership/members-of-the-exchange#members-of-the-exchange">Биржа мүшелерінің кестесі</a></li>
+        </ul>
+
+
+        <ul class="submenu" id="submenu-members-rating">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/membership/exchange-member-rating#rating-of-exchange-members">Биржа мүшелерінің рейтингі</a></li>
+        </ul>
+
+        <ul class="submenu" id="submenu-tariffs">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/membership/tariffs#tariffs">Биржа тарифтері</a></li>
+        </ul>
+
+        <ul class="submenu" id="submenu-how-to-start">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/membership/where-to-start#for_clients">Клиенттер үшін</a></li>
+            <li><a href="https://ccx.kz/membership/where-to-start#for_brokers_and_dealers">Биржа мүшелері үшін</a></li>
+            <li><a href="https://ccx.kz/membership/where-to-start#accreditation_rules">Аккредитация қағидалары</a></li>
+        </ul>
+    </div>
+
+</div>
+            </div>
+            <div class="menu-dynamic" data-section="support" style="display:none;">
+                <div class="menu-wrapper">
+    <div class="menu-container--subwrapper">
+        <ul class="menu-container--subwrapper-links">
+            <li>
+                <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+            </li>
+            <li>
+                <a href="https://ccx.kz/support/contact" class="menu-container--subwrapper-link" data-submenu="submenu-contacts">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Байланыстар</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ccx.kz/support/question-answer" class="menu-container--subwrapper-link" data-submenu="submenu-faq">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Сұрақ / Жауап</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ccx.kz/support/vacancies" class="menu-container--subwrapper-link" data-submenu="submenu-vacancies">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Бос жұмыс орындары</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-container--subwrapper submenu-wrapper">
+        <ul class="submenu active" id="submenu-contacts">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/support/contact#exchange_contacts">Биржа байланыстары</a></li>
+            <li><a href="https://ccx.kz/support/contact#cliring-contacts">Клиринг байланыстары</a></li>
+        </ul>
+
+
+        <ul class="submenu" id="submenu-faq">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/support/question-answer#question_answer">Сұрақ-жауап</a></li>
+        </ul>
+
+        <ul class="submenu" id="submenu-vacancies">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/support/vacancies#vacancies">Бос орындар тізімі</a></li>
+        </ul>
+    </div>
+
+</div>
+            </div>
+            <div class="menu-dynamic" data-section="news" style="display:none;">
+                <div class="menu-container--subwrapper">
+    <ul class="menu-container--subwrapper-links">
+        <li>
+                    <span class="menu-container--subwrapper-links-title">
+                        Бөлімдер
+                    </span>
+        </li>
+        <li>
+            <a href="https://ccx.kz/news/category/announcement" class="menu-container--subwrapper-link">
+                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                <span class="menu-container--subwrapper-link--text">Хабарландырулар</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://ccx.kz/news/category/corporate" class="menu-container--subwrapper-link">
+                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                <span class="menu-container--subwrapper-link--text">Жаңалықтар</span>
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+            <div class="menu-dynamic" data-section="trading" style="display:none;">
+                <div class="menu-wrapper">
+    <div class="menu-container--subwrapper">
+        <ul class="menu-container--subwrapper-links">
+            <li>
+                <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+            </li>
+            <li>
+                <a href="https://ccx.kz/trading-and-analytics/trading-results" data-submenu="submenu-results" class="menu-container--subwrapper-link">
+                    <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                    <span class="menu-container--subwrapper-link--text">Сауда қорытындылары</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="menu-container--subwrapper submenu-wrapper">
+        <ul class="submenu active" id="submenu-results">
+        </ul>
+
+        <ul class="submenu" id="submenu-bulletin">
+            <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+            <li><a href="https://ccx.kz/trading-and-analytics/stock-exchange-bulletin#year-in-numbers">Жыл сандармен</a></li>
+            <li><a href="https://ccx.kz/trading-and-analytics/stock-exchange-bulletin#general-dynamics-of-trading">Сауда-саттықтың жалпы динамикасы</a></li>
+        </ul>
+    </div>
+
+</div>
+            </div>
+
+            <div class="menu-container-image">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="menu-container" id="internationalTradesNavMenu">
+    <div class="container">
+        <div class="menu-container-inner">
+            <div class="menu-dynamic" data-section="about">
+                <div class="menu-container--subwrapper">
+                    <ul class="menu-container--subwrapper-links">
+                        <li>
+                            <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/international-trades/announcements-of-auctions" class="menu-container--subwrapper-link">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Сауда-саттық бойынша хабарландырулар</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/international-trades/results" class="menu-container--subwrapper-link">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Сауда қорытындылары</span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#" class="menu-container--subwrapper-link">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Халықаралық сауда-саттық жаңалықтары</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-container-image">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="menu-container" id="coalContent">
+    <div class="container">
+        <div class="menu-container-inner">
+            <div class="menu-dynamic" data-section="about">
+                <div class="menu-container--subwrapper">
+                    <ul class="menu-container--subwrapper-links">
+                        <li>
+                            <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/coal/market-and-results" class="menu-container--subwrapper-link" data-submenu="coal-submenu-market-results">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Нарық және қорытындылар</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/coal/trading-rules" class="menu-container--subwrapper-link" data-submenu="coal-submenu-rules">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Сауда-саттық қағидалары</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/coal/news" class="menu-container--subwrapper-link" data-submenu="coal-submenu-news">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Жаңалықтар</span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://ccx.kz/coal/tools" class="menu-container--subwrapper-link" data-submenu="coal-submenu-tools">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Құралдар</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+
+                <div class="menu-container--subwrapper submenu-wrapper">
+                    <ul class="submenu active" id="coal-submenu-market-results">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/coal/market-and-results#quotes">Бағамдар</a></li>
+                        <li><a href="https://ccx.kz/coal/market-and-results#indexes">Индекстер</a></li>
+                        <li><a href="https://ccx.kz/coal/market-and-results#delivery_plan">Жеткізу жоспары</a></li>
+                        <li><a href="https://ccx.kz/coal/market-and-results#trading_results">Сауда қорытындылары</a></li>
+                    </ul>
+
+
+                    <ul class="submenu" id="coal-submenu-rules">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/coal/trading-rules#trading-rules">Сауда-саттық қағидалары</a></li>
+                    </ul>
+
+                    <ul class="submenu" id="coal-submenu-news">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/coal/news#news">Жаңалықтар</a></li>
+                    </ul>
+
+                    <!-- <ul class="submenu" id="coal-submenu-tools">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/coal/tools#documentation">Құралдар</a></li>
+                    </ul> -->
+
+                </div>
+
+            </div>
+            <div class="menu-container-image">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="menu-container" id="gsmContent">
+    <div class="container">
+        <div class="menu-container-inner">
+            <div class="menu-dynamic" data-section="about">
+                <div class="menu-container--subwrapper">
+                    <ul class="menu-container--subwrapper-links">
+                        <li>
+                            <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/gsm" class="menu-container--subwrapper-link" data-submenu="gsm-submenu-market-results">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Нарық және қорытындылар</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/gsm/trading-rules" class="menu-container--subwrapper-link" data-submenu="gsm-submenu-rules">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Сауда-саттық қағидалары</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/gsm/schedule" class="menu-container--subwrapper-link" data-submenu="gsm-submenu-schedule">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Сауда-саттық ақпараты</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/gsm/news" class="menu-container--subwrapper-link" data-submenu="gsm-submenu-news">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Жаңалықтар</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="menu-container--subwrapper submenu-wrapper">
+                    <ul class="submenu active" id="gsm-submenu-market-results">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/gsm#quotes">Бағамдар</a></li>
+                        <li><a href="https://ccx.kz/gsm#indexes">Индекстер</a></li>
+                        <li><a href="https://ccx.kz/gsm#summary_report">Жиынтық есеп</a></li>
+                    </ul>
+
+
+                    <ul class="submenu" id="gsm-submenu-rules">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/gsm/trading-rules#trading-rules">Сауда-саттық қағидалары</a></li>
+                    </ul>
+
+                    <ul class="submenu" id="gsm-submenu-schedule">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/gsm/schedule#basic_price">Базалық бағалар</a></li>
+                        <li><a href="https://ccx.kz/gsm/schedule#documents">Құжаттама</a></li>
+                    </ul>
+
+                    <ul class="submenu" id="gsm-submenu-news">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/gsm/news#news">Жаңалықтар</a></li>
+                    </ul>
+
+                    
+
+                </div>
+
+            </div>
+            <div class="menu-container-image">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="menu-container" id="cementContent">
+    <div class="container">
+        <div class="menu-container-inner">
+            <div class="menu-dynamic" data-section="about">
+                <div class="menu-container--subwrapper">
+                    <ul class="menu-container--subwrapper-links">
+                        <li>
+                            <span class="menu-container--subwrapper-links-title">Бөлімдер</span>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/cement" class="menu-container--subwrapper-link" data-submenu="cement-submenu-market-results">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Нарық және қорытындылар</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/cement/trading-rules" class="menu-container--subwrapper-link" data-submenu="cement-submenu-rules">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Сауда-саттық қағидалары</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccx.kz/cement/news" class="menu-container--subwrapper-link" data-submenu="cement-submenu-news">
+                                <i style="background-color: #909090; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-chevron-right nav-icon"></i>
+                                <span class="menu-container--subwrapper-link--text">Жаңалықтар</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-container--subwrapper submenu-wrapper">
+                    <ul class="submenu active" id="cement-submenu-market-results">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/cement#quotes">Бағамдар</a></li>
+                        <li><a href="https://ccx.kz/cement#indexes">Индекстер</a></li>
+                    </ul>
+
+                    <ul class="submenu" id="cement-submenu-rules">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/cement/trading-rules#trading-rules">Сауда-саттық қағидалары</a></li>
+                    </ul>
+
+                    <ul class="submenu" id="cement-submenu-news">
+                        <li><span class="menu-container--subwrapper-links-title">Бетте</span></li>
+                        <li><a href="https://ccx.kz/cement/news#news">Жаңалықтар</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="menu-container-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Page Content -->
+            <div>
+                    <div class="menu-overlay" id="menuOverlay"></div>
+
+        
+        <div class="tab-container hidden-mobile" id="tabContainer">
+        <div class="container">
+            <div class="tab-container-inner">
+                <ul class="tab-container__links-list" >
+                                                                    <li class="tab-container__links-list-item " data-tab="trading-results">
+                            <a href="#trading-results" >Сауда қорытындылары</a>
+                        </li>
+                    
+                                    </ul>
+
+                                <div class="tab-title">
+                <span class="tab-title-menu">
+                    Сауда қорытындылары
+                    <i style="background-color: #1F417B; min-width: 17px; min-height: 17px; font-size: 17px; line-height: 17px" class="icon icon-menu-custom tab-icon"></i>
+                </span>
+                                        <span class="tab-title-separator">/</span>
+                    <span class="tab-title-current">Сауда және аналитика</span>
+                    
+                    <div class="tab-dropdown">
+                                            </div>
+                </div>
+                            </div>
+        </div>
+    </div>
+
+    <div class="tab-search-panel hidden" id="tabSearchPanel">
+        <div class="container stock-market-news-container-header">
+            <label class="control control--with-icon-left stock-market-news-container-header__search"
+       style="width: 730px; ">
+
+            <input
+            type="text"
+            name="search"
+            id="search"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Поиск по новостям</span>
+
+                    <i class="control-icon control-icon--left fas fa-magnifying-glass"></i>
+        
+        
+            </label>
+
+
+
+            <div class="stock-market-news-container-header--date">
+                <label>Дата публикации</label>
+
+                <label class="control control--with-icon-left stock-market-news-container--header__search"
+       style="width: 130px; ">
+
+            <input
+            type="text"
+            name="date_from"
+            id="date_from"
+            value=""
+            placeholder=" "
+            class="control-field custom-date-input"
+             readonly                                 />
+        <span class="control-label">От</span>
+
+                    <i class="control-icon control-icon--left fas fa-calendar-days"></i>
+        
+        
+            </label>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const flatpickrConfig = {
+                enableTime: false,
+                noCalendar: false,
+                time_24hr: false,
+                enableSeconds: false,
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "d.m.Y"            };
+            if (typeof flatpickr !== 'undefined' && flatpickr.l10ns && flatpickr.l10ns.ru) {
+                flatpickrConfig.locale = flatpickr.l10ns.ru;
+            }
+            flatpickr(".custom-date-input", flatpickrConfig);
+        });
+    </script>
+
+
+                <label class="control control--with-icon-left stock-market-news-container--header__search"
+       style="width: 130px; ">
+
+            <input
+            type="text"
+            name="date_to"
+            id="date_to"
+            value=""
+            placeholder=" "
+            class="control-field custom-date-input"
+             readonly                                 />
+        <span class="control-label">До</span>
+
+                    <i class="control-icon control-icon--left fas fa-calendar-days"></i>
+        
+        
+            </label>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const flatpickrConfig = {
+                enableTime: false,
+                noCalendar: false,
+                time_24hr: false,
+                enableSeconds: false,
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "d.m.Y"            };
+            if (typeof flatpickr !== 'undefined' && flatpickr.l10ns && flatpickr.l10ns.ru) {
+                flatpickrConfig.locale = flatpickr.l10ns.ru;
+            }
+            flatpickr(".custom-date-input", flatpickrConfig);
+        });
+    </script>
+
+            </div>
+
+            <div class="stock-market-news-container-header--buttons">
+                <button
+    style="--btn-border-color: #1F417B; width: 51px; height: 51px; border-radius: 12px; border-width: 2px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--primary button--icon"
+>
+    <i style="background-color: #F1F1F4; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-magnifying-glass "></i>
+    </button>
+                <button
+    style="--btn-border-color: #1F417B; width: 51px; height: 51px; border-radius: 12px; border-width: 2px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--outline button--icon" style="border: 2px;" id="tabSearchClose"
+>
+    <i style="background-color: #1F417B; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-circle-x "></i>
+    </button>
+            </div>
+        </div>
+    </div>
+
+                <div class="mobile-tab-container visible-mobile">
+        <div class="container">
+            <div class="mobile-tab-container--inner">
+                <div style="display: flex; align-items: center; gap: 20px">
+                                <span class="mobile-tab-wrapper" id="mobileTabTrigger">
+                        <span id="mobileTabCurrent">Сауда қорытындылары</span>
+                        </span>
+                
+                                    </div>
+
+                                <span class="tab-title-menu">
+            <i style="background-color: #1F417B; min-width: 17px; min-height: 17px; font-size: 17px; line-height: 17px" class="icon icon-menu-custom tab-icon tab-icon--mobile"></i>
+                </span>
+
+                <div class="tab-dropdown">
+                                    </div>
+                
+                            </div>
+        </div>
+        </div>
+                <script>
+            document.querySelectorAll('.tab-container__links-list-item, .mobile-tab-dropdown li').forEach((item) => {
+                const link = item.querySelector('a');
+                if (!link) {
+                    return;
+                }
+                const href = link.getAttribute('href') || '';
+                if (!href || href.charAt(0) === '#') {
+                    return;
+                }
+                item.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    window.location.href = link.href;
+                }, true);
+            });
+        </script>
+
+    <div class="container" style="max-width:-webkit-fill-available;">
+        <section id="trading-results" class="section" >
+            <div class="section__header mb-6" >
+            <div class="section__title">
+    <i style="min-width: 38px; min-height: 38px; font-size: 38px; line-height: 38px" class="icon icon-title "></i>
+
+    <span>
+        Сауда қорытындылары
+    </span>
+</div>
+        </div>
+    
+    <div class="section__content">
+        <div class="trading-results-container">
+        <div class="trading-results-container-header">
+            <div data-popup-open="myFilter" class="trading-results-container-header-filter-button">
+                <button
+    style="--btn-border-color: #1F417B; width: 36px; height: 36px; border-radius: 12px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--primary button--icon"
+>
+    <i style="background-color: #F1F1F4; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-filter "></i>
+    </button>
+
+                <span class="filter-title">Сүзгілер</span>
+            </div>
+
+            <div class="trading-results-container-header-active-filters active-filters-wrapper" id="activeFiltersWrapper" style="display: none;">
+                <span class="trading-results-container-header-active-filters-title">Белсенді сүзгілер:</span>
+
+                <div class="trading-results-container-header-active-filters-list hidden-mobile" id="activeFiltersList">
+                    
+                </div>
+                <div class="visible-mobile">
+                    <button class="mobile-filters-button" data-popup-open="activeFilters">
+                        <span id="activeFiltersCountMobile">0 сүзгілер</span>
+
+                        <i style="background-color: #999999; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-sort-down "></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="last_trades_tabs--sectional-list" >
+                            <div class="table-wrapper ">
+    <table class="custom-table-flexible" data-sortable="false">
+        <thead>
+        <tr>
+                            <th>
+                                <span class="header-text">Күні</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Бір күндегі мәмілелер бойынша жалпы айналым, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">ЕАЭО СЭҚ ТН коды</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Тауардың атауы</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Сауда-саттықтың ашылу бағасы, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Сауда-саттықтың жабылу бағасы, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Мәміленің макс. бағасы, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Мәміленің мин. бағасы, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Мәміленің орташа өлшенген бағасы, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Келісім-шарт сомасы, тг</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Сатып алушының брокері</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Сатып алушының атауы</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Сатушының брокері</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Сатушының атауы</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Жасалған мәмілелер саны</span>
+                            </th>
+                            <th>
+                                <span class="header-text">Жеткізу шарты</span>
+                            </th>
+                        </tr>
+        </thead>
+        <tbody>
+        <tr>
+                                <td>02.09.2026</td>
+                                <td>294 568 994.15</td>
+                                <td>-</td>
+                                <td>
+                                                                        Күні бойынша жиыны
+                                </td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="td-text" >
+                                        -
+                                    </span>
+                                                                    </td>
+                                <td>-</td>
+                                <td>
+                                    <span class="td-text" >
+                                        -
+                                    </span>
+                                                                    </td>
+                                <td>48</td>
+                                <td>-</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО Damu Trading</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ИП ДАН 630715350163
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-50 мм, ЖШС СТ Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-300 мм, ҚР СТ Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-50 мм, ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО Kokshe-Broker</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Сауда Көмір 100140015527
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>6 288 877.00</td>
+                                <td>ТОО KARA TASS</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО KARA TASS 221140037278
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-50 мм, ЖШС СТ Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-300 мм, ҚР СТ Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-50 мм, ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО UralProTrade</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Ариант KZ 170140014105
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО MRM Logistic</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Ариант KZ 170140014105
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>6 288 877.00</td>
+                                <td>ТОО TradeNova</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ИП Сапалы Қызмет 870209300978
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО MRM Logistic</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Силикат-Астана 200640004520
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-300 мм, ҚР СТ 1816-2014
+                                </td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>9 089 871.00</td>
+                                <td>ТОО KZ-Broker</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО KZ-Broker 220640050578
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2523</td>
+                                <td>
+                                                                        ЦЕМ I маркалы цемент
+                                </td>
+                                <td>45 000.00</td>
+                                <td>45 000.00</td>
+                                <td>45 000.00</td>
+                                <td>45 000.00</td>
+                                <td>45 000.00</td>
+                                <td>3 240 000.00</td>
+                                <td>ТОО Market &amp; Stocs LTD</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ИП Егоров Павел Николаевич 820813351055
+                                    </span>
+                                                                    </td>
+                                <td>ТОО Пайдалы</td>
+                                <td>
+                                    <span class="td-text"  title="ТОО Производственная компания Цементный завод Семей 021240000022" >
+                                        ТОО Производственная компания Цементный завод Семей 02124000002…
+                                    </span>
+                                                                            <span class="td-icon" data-full-text="ТОО Производственная компания Цементный завод Семей 021240000022">
+                                            <i style="background-color: #1F417B; min-width: 14px; min-height: 14px; font-size: 14px; line-height: 14px" class="icon icon-info "></i>
+                                        </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>CPT</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-50 мм, ЖШС СТ Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-300 мм, ҚР СТ Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-50 мм, ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО Бұланды көмір</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Бұланды көмір 030740009777
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 0-300 мм, ҚР СТ 1816-2014
+                                </td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>8 657.02</td>
+                                <td>9 089 871.00</td>
+                                <td>ТОО QazInvest Inc.</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Шығыс-Даму 120240005283
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО Taurus Capital</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ИП Комир-ПВ 891220450134
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Көмір маркасы D, тұрмыстық, көмір мөлшері - 25-300 мм,  ЖШС СТ 151140021791-073-2022
+                                </td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>8 984.11</td>
+                                <td>3 144 438.50</td>
+                                <td>ТОО Kokshe-Broker</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО АРС 000140004302
+                                    </span>
+                                                                    </td>
+                                <td>ТОО КОРУНД-777</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Каражыра 021240000409
+                                    </span>
+                                                                    </td>
+                                <td>1</td>
+                                <td>EXW</td>
+                            </tr>
+                                                                                <tr>
+                                <td>02.09.2026</td>
+                                <td>-</td>
+                                <td>2701</td>
+                                <td>
+                                                                        Қарапайым көмір (0-300мм) D сорты, DV топшасы, халықтың тұрмыстық қажеттіліктеріне арналған, күлділігі төмен ҚР СТ 1526-1-2022
+                                </td>
+                                <td>9 178.75</td>
+                                <td>9 178.75</td>
+                                <td>9 178.75</td>
+                                <td>9 178.75</td>
+                                <td>9 178.75</td>
+                                <td>34 833 356.25</td>
+                                <td>ТОО SMET GROUP</td>
+                                <td>
+                                    <span class="td-text" >
+                                        ТОО Coal trade&quot; (Коал трэйд) 111040013472
+                                    </span>
+                                                                    </td>
+                                <td>АО Шубарколь комир</td>
+                                <td>
+                                    <span class="td-text" >
+                                        АО Шубарколь комир 020740000236
+                                    </span>
+                                                                    </td>
+                                <td>4</td>
+                                <td>FCA</td>
+                            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="table-tooltip" class="table-tooltip"></div>
+            
+                                <div class="stock-market-news-container-main--news-list_pagination">
+                    <div class="stock-market-news-container-main--news-list_pagination_controls">
+                        
+                        <button onclick="changePage(1)" class="disabled">
+                            <i style="background-color: #141414; min-width: 10px; min-height: 10px; font-size: 10px; line-height: 10px" class="icon icon-angles-left "></i>
+                        </button>
+                        <button onclick="changePage(0)" class="disabled">
+                            <i style="background-color: #141414; min-width: 10px; min-height: 10px; font-size: 10px; line-height: 10px" class="icon icon-chevron-left "></i>
+                        </button>
+
+                        
+                                                    <button onclick="changePage(1)" class="active">
+                                1
+                            </button>
+                                                    <button onclick="changePage(2)" class="">
+                                2
+                            </button>
+                                                    <button onclick="changePage(3)" class="">
+                                3
+                            </button>
+                        
+                                                                                    <button class="ellipsis">...</button>
+                                                        <button onclick="changePage(5)">5</button>
+                        
+                        <button onclick="changePage(2)" class="">
+                            <i style="background-color: #141414; min-width: 10px; min-height: 10px; font-size: 10px; line-height: 10px" class="icon icon-chevron-right "></i>
+                        </button>
+                        <button onclick="changePage(5)" class="">
+                            <i style="background-color: #141414; min-width: 10px; min-height: 10px; font-size: 10px; line-height: 10px" class="icon icon-angles-right "></i>
+                        </button>
+                    </div>
+
+                    <div class="stock-market-news-container-main--news-list_pagination_per_page">
+                        <span>Бетте</span>
+
+                        <select name="per_page" onchange="changePerPage(this.value)">
+                            <option value="10" >10</option>
+                            <option value="15" selected>15</option>
+                            <option value="20" >20</option>
+                            <option value="30" >30</option>
+                            <option value="50" >50</option>
+                        </select>
+                    </div>
+
+                    <div class="stock-market-news-container-main--news-list_pagination_info">
+                        <span>Жазбалар көрсетілген <b>1-15</b> ішінен <b>72</b></span>
+                    </div>
+                </div>
+                        </div>
+    </div>
+    </div>
+
+    </section>
+
+<div id="myFilter" class="popup-filter popup-filter--center popup-filter--full">
+    <div class="popup-filter__dialog">
+        <div class="popup-filter__header">
+            <h3 class="popup-filter__title">
+                Сүзгілер <span>Сауда-саттық қорытындылары</span>
+            </h3>
+            <button type="button" class="popup-filter__close" data-popup-close="myFilter">
+                <i style="background-color: #909090; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-circle-x "></i>
+            </button>
+        </div>
+
+        <div class="popup-filter__body">
+            <div class="trading-results-container-filter-popup">
+        <div class="trading-results-container-header-active-filters active-filters-wrapper" id="activeFiltersWrapperPopup" style="display: none;">
+            <span class="trading-results-container-header-active-filters-title">Белсенді сүзгілер:</span>
+
+            <div class="trading-results-container-header-active-filters-list hidden-mobile" id="activeFiltersListPopup">
+                
+            </div>
+
+            <div class="visible-mobile">
+                <button class="mobile-filters-button" data-popup-open="activeFilters">
+                    <span id="activeFiltersCountPopup">0 сүзгілер</span>
+
+                    <i style="background-color: #999999; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-sort-down "></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="trading-results-form">
+            <div class="trading-results-form-form-group">
+                <label class="control control--with-icon-left "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="date_from"
+            id="date_from"
+            value=""
+            placeholder=" "
+            class="control-field custom-date-input"
+             readonly                                 />
+        <span class="control-label">Бастапқы күні</span>
+
+                    <i class="control-icon control-icon--left fas fa-calendar-days"></i>
+        
+        
+            </label>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const flatpickrConfig = {
+                enableTime: false,
+                noCalendar: false,
+                time_24hr: false,
+                enableSeconds: false,
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "d.m.Y"            };
+            if (typeof flatpickr !== 'undefined' && flatpickr.l10ns && flatpickr.l10ns.ru) {
+                flatpickrConfig.locale = flatpickr.l10ns.ru;
+            }
+            flatpickr(".custom-date-input", flatpickrConfig);
+        });
+    </script>
+
+
+                <label class="control control--with-icon-left "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="date_to"
+            id="date_to"
+            value=""
+            placeholder=" "
+            class="control-field custom-date-input"
+             readonly                                 />
+        <span class="control-label">Соңғы күні</span>
+
+                    <i class="control-icon control-icon--left fas fa-calendar-days"></i>
+        
+        
+            </label>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const flatpickrConfig = {
+                enableTime: false,
+                noCalendar: false,
+                time_24hr: false,
+                enableSeconds: false,
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "d.m.Y"            };
+            if (typeof flatpickr !== 'undefined' && flatpickr.l10ns && flatpickr.l10ns.ru) {
+                flatpickrConfig.locale = flatpickr.l10ns.ru;
+            }
+            flatpickr(".custom-date-input", flatpickrConfig);
+        });
+    </script>
+
+            </div>
+
+            <div class="trading-results-form-form-group">
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="product_code"
+            id="product_code"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Өнім коды (мысалы: CL1)</span>
+
+        
+        
+            </label>
+
+
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="section_code"
+            id="section_code"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Секция коды (мысалы: CL)</span>
+
+        
+        
+            </label>
+
+
+            </div>
+
+            <div class="trading-results-form-form-group">
+                <div class="custom-select  "
+     style="width: auto"
+     data-disabled="false"
+     data-disabled-click="false"
+     data-search="false"
+     >
+    <div class="custom-select-trigger">
+        <span class="custom-select-value"></span>
+        <label class="placeholder">Сауда-саттық түрі</label>
+        <span class="custom-select-arrow">
+            <i style="background-color: #A8A6B3; min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-sort-down "></i>
+        </span>
+    </div>
+
+    <div class="custom-options">
+        
+            <div class="custom-options-list">
+                                    <div class="custom-option " data-value="Спот">
+                        <span class="option-text">Спот</span>
+                                            </div>
+                                    <div class="custom-option " data-value="Регулируемые">
+                        <span class="option-text">Регулируемые</span>
+                                            </div>
+                            </div>
+    </div>
+
+    <input type="hidden" name="instrument_regulated">
+</div>
+
+<div id="select-tooltip" class="select-tooltip"></div>
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="tn_ved"
+            id="tn_ved"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">ЕАЭО СЭҚ ТН коды</span>
+
+        
+        
+            </label>
+
+
+            </div>
+
+            <div class="trading-results-form-form-group">
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="broker_buyer_name"
+            id="broker_buyer_name"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Сатып алушының брокері</span>
+
+        
+        
+            </label>
+
+
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="broker_seller_name"
+            id="broker_seller_name"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Сатушының брокері</span>
+
+        
+        
+            </label>
+
+
+            </div>
+
+            <div class="trading-results-form-form-group">
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="buyer_name"
+            id="buyer_name"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Сатып алушының атауы</span>
+
+        
+        
+            </label>
+
+
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="seller_name"
+            id="seller_name"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Сатушының атауы</span>
+
+        
+        
+            </label>
+
+
+            </div>
+
+            <div class="trading-results-form-form-group">
+                <label class="control "
+       style="width: 100%; ">
+
+            <input
+            type="text"
+            name="delivery_term"
+            id="delivery_term"
+            value=""
+            placeholder=" "
+            class="control-field "
+                                            />
+        <span class="control-label">Жеткізу шарты (мысалы: FCA)</span>
+
+        
+        
+            </label>
+
+
+            </div>
+
+           
+        </div>
+    </div>
+        </div>
+
+                    <div class="popup-filter__footer">
+                <button
+    style="--btn-border-color: #1F417B; width: auto; height: auto; border-radius: 12px; border-width: 2px; min-width: auto; color: #1F417B"
+    type="button"
+    
+    class="button button--outline button--sm" id="resetFiltersBtn"
+>
+    <i style="background-color: #1F417B; min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-circle-x "></i>
+            Тазарту
+    </button>
+        <button
+    style="--btn-border-color: #1F417B; width: auto; height: auto; border-radius: 12px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--primary button--sm" id="applyFiltersBtn"
+>
+    <i style="background-color: white; min-width: 18px; min-height: 18px; font-size: 18px; line-height: 18px" class="icon icon-magnifying-glass "></i>
+            Іздеу
+    </button>
+            </div>
+            </div>
+</div>
+
+<div id="activeFilters" class="popup-filter popup-filter--bottom popup-filter--sheet">
+    <div class="popup-filter__dialog">
+        <div class="popup-filter__header">
+            <h3 class="popup-filter__title">
+                 <span>Белсенді сүзгілер</span>
+            </h3>
+            <button type="button" class="popup-filter__close" data-popup-close="activeFilters">
+                <i style="background-color: #909090; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-circle-x "></i>
+            </button>
+        </div>
+
+        <div class="popup-filter__body">
+            <div class="trading-results-container-header-active-filters-list" id="activeFiltersListMobile">
+        
+    </div>
+        </div>
+
+            </div>
+</div>
+
+<div class="custom-modal-overlay" id="applyJobModal" style="display: none;">
+    <div class="custom-modal
+         custom-modal-md ">
+
+                    <div class="custom-modal-header">
+                Өтінім беру
+                <button type="button" class="close-modal" onclick="closeModal('applyJobModal')">
+                    <i style="background-color: #909090; min-width: 16px; min-height: 16px; font-size: 16px; line-height: 16px" class="icon icon-close "></i>
+                </button>
+            </div>
+        
+                    <div class="custom-modal-body">
+                <div class="vacancy-form">
+            <span class="vacancy-form-title">Бос жұмыс орны: <b>Жетекші аналитик</b></span>
+            <label class="control "
+       style="width: 100%; ">
+    
+    <textarea 
+        name="about"
+        id="about"
+        rows="3"
+        placeholder=" "
+        class="control-field"
+                    ></textarea>
+    <span class="control-label">Өзіңіз туралы бірнеше сөз</span>
+    
+        
+    </label>
+            <label class="control control--with-icon-left control--file "
+       style="width: 100%; ">
+
+            <input class="file-input" type="file" name="resume" id="resume"   />
+        <span class="file-current control-field">
+            <span class="file-name" data-placeholder="Түйіндемеңізді жүктеңіз">Түйіндемеңізді жүктеңіз</span>
+                            <i class="control-icon control-icon--left fas fa-cloud-arrow-up"></i>
+                        <button class="file-remove" type="button" title="Удалить">
+                <span class="sr-only">Удалить</span>
+                <i class="fas fa-trash-can"></i>
+            </button>
+            <span class="file-loader"></span>
+        </span>
+            </label>
+
+
+            <label class="control control--with-icon-left control--file "
+       style="width: 100%; ">
+
+            <input class="file-input" type="file" name="resume" id="resume"   />
+        <span class="file-current control-field">
+            <span class="file-name" data-placeholder="Ілеспе хатты жүктеңіз">Ілеспе хатты жүктеңіз</span>
+                            <i class="control-icon control-icon--left fas fa-cloud-arrow-up"></i>
+                        <button class="file-remove" type="button" title="Удалить">
+                <span class="sr-only">Удалить</span>
+                <i class="fas fa-trash-can"></i>
+            </button>
+            <span class="file-loader"></span>
+        </span>
+            </label>
+
+
+        </div>
+            </div>
+        
+                    <div class="custom-modal-footer">
+                <button
+    style="--btn-border-color: #1F417B; width: auto; height: auto; border-radius: 12px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--primary button--md" onclick="closeModal('applyJobModal')"
+>
+    Өтінімді жіберу
+    </button>
+            </div>
+            </div>
+</div>
+
+<div id="sectional" class="popup-filter popup-filter--bottom popup-filter--sheet">
+    <div class="popup-filter__dialog">
+        <div class="popup-filter__header">
+            <h3 class="popup-filter__title">
+                A95FCQTD <span>АИ-95 бензині</span>
+            </h3>
+            <button type="button" class="popup-filter__close" data-popup-close="sectional">
+                <i style="background-color: #909090; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-circle-x "></i>
+            </button>
+        </div>
+
+        <div class="popup-filter__body">
+            <div class="popup-about-list">
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Жеткізу шарттары
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                EXW
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Жеткізу базисі
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                Дегелең станциясы
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Сатып алу (мин)  
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                10 414.30 тг
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Сатып алу (макс)
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                10 414.30 тг
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Сату (мин)
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                10 414.30 тг
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Сату (макс)
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                10 414.30 тг
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Ағымдағы сессияның базалық бағасы
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                10 414.30 тг
+            </span>
+        </div>
+
+        <div class="popup-about-list-wrapper">
+            <span class="popup-about-list-wrapper-label">
+                Орташа өлшенген баға
+            </span>
+
+            <span class="popup-about-list-wrapper-value">
+                10 414.30 тг
+            </span>
+        </div>
+    </div>
+        </div>
+
+            </div>
+</div>
+
+<style>
+
+.last_trades_tabs--sectional-list .custom-table-flexible {
+    font-size: 13px;
+}
+
+.last_trades_tabs--sectional-list .custom-table-flexible th {
+    padding: 10px 20px !important;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.3;
+    text-align: center;
+    min-width: 140px;
+}
+
+.last_trades_tabs--sectional-list .custom-table-flexible th .header-text {
+    display: inline-block;
+    width: 100%;
+}
+
+.last_trades_tabs--sectional-list .custom-table-flexible td {
+    padding: 10px 20px !important;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.last_trades_tabs--sectional-list .custom-table-flexible tbody tr {
+    height: auto;
+    min-height: 40px;
+}
+
+.last_trades_tabs--sectional-list .custom-table-flexible thead tr {
+    height: auto;
+    min-height: 50px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #909090;
+}
+
+.stock-market-news-container-main--news-list_pagination_controls button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.stock-market-news-container-main--news-list_pagination_controls button.ellipsis {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+</style>
+
+<script>
+function changePage(page) {
+    if (page < 1) return;
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('page', page);
+
+    window.location.href = url.toString();
+}
+
+function changePerPage(perPage) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('per_page', perPage);
+    url.searchParams.set('page', 1);
+
+    window.location.href = url.toString();
+}
+
+(function() {
+    const filterLabels = {
+        'date_from': 'Дата от',
+        'date_to': 'Дата до',
+        'product_code': 'Код продукта',
+        'section_code': 'Код секции',
+        'instrument_regulated': 'Тип торгов',
+        'tn_ved': 'Код ТН ВЭД ЕАЭС',
+        'broker_buyer_name': 'Брокер покупателя',
+        'broker_seller_name': 'Брокер продавца',
+        'buyer_name': 'Наименование покупателя',
+        'seller_name': 'Наименование продавца',
+        'delivery_term': 'Условие поставки'
+    };
+
+    function getFilterLabel(name) {
+        if (name === 'instrument_regulated') {
+            const value = new URLSearchParams(window.location.search).get(name);
+            if (value === '0') return 'Тип торгов: Спот';
+            if (value === '1') return 'Тип торгов: Регулируемые';
+            return 'Тип торгов';
+        }
+        return filterLabels[name] || name;
+    }
+
+    function getSelectValue(select) {
+        const hiddenInput = select.querySelector('input[type=hidden]');
+        return hiddenInput ? hiddenInput.value : '';
+    }
+
+    function createFilterTag(filter) {
+        const tag = document.createElement('div');
+        tag.className = 'label-value';
+        tag.setAttribute('data-tag', '');
+        tag.setAttribute('data-filter-name', filter.name);
+
+        const iconSvg = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="tag-remove"><circle cx="10" cy="10" r="9" stroke="#909090" stroke-width="1"/><path d="M6 6L14 14M14 6L6 14" stroke="#909090" stroke-width="1.5" stroke-linecap="round"/></svg>';
+
+        let displayValue = filter.value;
+        if (filter.name === 'instrument_regulated') {
+            displayValue = formatInstrumentRegulated(filter.value);
+        }
+
+        tag.innerHTML = `
+            <div class="tag-remove-wrapper">
+                ${iconSvg}
+                <div class="label-value__text">
+                    <span class="label-value__label">${filter.label}:</span>
+                    <span class="label-value__value">${displayValue}</span>
+                </div>
+            </div>
+        `;
+
+        return tag;
+    }
+
+    function updateActiveFilters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const activeFilters = [];
+        const excludeParams = ['page', 'per_page', 'max_results'];
+
+        urlParams.forEach((value, key) => {
+            if (!excludeParams.includes(key) && value && value.trim() !== '') {
+                activeFilters.push({
+                    name: key,
+                    value: value,
+                    label: getFilterLabel(key)
+                });
+            }
+        });
+
+        const containers = [
+            { list: 'activeFiltersList', wrapper: 'activeFiltersWrapper', count: 'activeFiltersCountMobile' },
+            { list: 'activeFiltersListPopup', wrapper: 'activeFiltersWrapperPopup', count: 'activeFiltersCountPopup' },
+            { list: 'activeFiltersListMobile', wrapper: null, count: null }
+        ];
+
+        containers.forEach(container => {
+            const listEl = document.getElementById(container.list);
+            const wrapperEl = container.wrapper ? document.getElementById(container.wrapper) : null;
+            const countEl = container.count ? document.getElementById(container.count) : null;
+
+            if (listEl) {
+                listEl.innerHTML = '';
+
+                activeFilters.forEach(filter => {
+                    const tag = createFilterTag(filter);
+                    listEl.appendChild(tag);
+                });
+            }
+
+            if (wrapperEl) {
+                if (activeFilters.length > 0) {
+                    wrapperEl.style.display = 'block';
+                } else {
+                    wrapperEl.style.display = 'none';
+                }
+            }
+
+            if (countEl) {
+                const count = activeFilters.length;
+                countEl.textContent = count === 0 ? '0 фильтров' :
+                                     count === 1 ? '1 фильтр' :
+                                     `${count} фильтра`;
+            }
+        });
+    }
+
+    function formatDateForFilter(value, filterName) {
+        if ((filterName === 'date_from' || filterName === 'date_to') && value) {
+            const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            if (match) {
+                return `${match[3]}.${match[2]}.${match[1]}`;
+            }
+        }
+        return value;
+    }
+
+    function formatInstrumentRegulated(value) {
+        if (value === '0') return 'Спот';
+        if (value === '1') return 'Регулируемые';
+        return value;
+    }
+
+    function formatDateForInput(value) {
+        const match = value.match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
+        if (match) {
+            return `${match[3]}-${match[2]}-${match[1]}`;
+        }
+        return value;
+    }
+
+    function saveFilter(name, value) {
+        const url = new URL(window.location.href);
+
+        if (value && value.trim() !== '') {
+            const formattedValue = formatDateForFilter(value.trim(), name);
+            url.searchParams.set(name, formattedValue);
+        } else {
+            url.searchParams.delete(name);
+        }
+
+        url.searchParams.set('page', '1');
+        window.history.pushState({}, '', url.toString());
+        updateActiveFilters();
+    }
+    document.addEventListener('click', (e) => {
+        const removeBtn = e.target.closest('.tag-remove-wrapper, .tag-remove');
+        if (removeBtn) {
+            const tag = removeBtn.closest('[data-tag]');
+            if (tag) {
+                const filterName = tag.getAttribute('data-filter-name');
+                if (filterName) {
+                    const url = new URL(window.location.href);
+                    url.searchParams.delete(filterName);
+                    url.searchParams.set('page', '1');
+
+                    // Перезагружаем страницу для обновления данных
+                    window.location.href = url.toString();
+                }
+            }
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterForm = document.querySelector('.trading-results-form');
+        if (!filterForm) return;
+
+        const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+        const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+        filterForm.querySelectorAll('input[type="text"], input[type="date"]').forEach(input => {
+            const name = input.name;
+            if (!name) return;
+
+            input.addEventListener('blur', () => {
+                saveFilter(name, input.value);
+            });
+
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    saveFilter(name, input.value);
+                }
+            });
+        });
+
+        if (applyFiltersBtn) {
+            applyFiltersBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const url = new URL(window.location.href);
+
+                // Маппинг для instrument_regulated
+                const instrumentRegulatedMap = {
+                    'Спот': '0',
+                    'Регулируемые': '1'
+                };
+
+                filterForm.querySelectorAll('input[type="text"], input[type="date"]').forEach(input => {
+                    if (input.name && input.value) {
+                        const formattedValue = formatDateForFilter(input.value, input.name);
+                        url.searchParams.set(input.name, formattedValue);
+                    }
+                });
+
+                filterForm.querySelectorAll('input[type="hidden"]').forEach(input => {
+                    if (input.name && input.value) {
+                        // Преобразуем instrument_regulated из текста в значение
+                        if (input.name === 'instrument_regulated') {
+                            const value = instrumentRegulatedMap[input.value] || input.value;
+                            url.searchParams.set(input.name, value);
+                        } else {
+                            url.searchParams.set(input.name, input.value);
+                        }
+                    }
+                });
+
+                url.searchParams.set('page', '1');
+                window.location.href = url.toString();
+            });
+        }
+
+        if (resetFiltersBtn) {
+            resetFiltersBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const url = new URL(window.location.href);
+                const pageParam = url.searchParams.get('page');
+
+                url.search = '';
+                if (pageParam) {
+                    url.searchParams.set('page', '1');
+                }
+
+                window.location.href = url.toString();
+            });
+        }
+
+        updateActiveFilters();
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Маппинг для instrument_regulated
+        const instrumentRegulatedMap = {
+            'Спот': '0',
+            'Регулируемые': '1'
+        };
+
+        // Обработка изменений в select для instrument_regulated
+        const instrumentRegulatedSelect = filterForm.querySelector('[name="instrument_regulated"]');
+        if (instrumentRegulatedSelect) {
+            const selectContainer = instrumentRegulatedSelect.closest('.custom-select');
+            if (selectContainer) {
+                // Обработка изменений
+                selectContainer.addEventListener('change', function() {
+                    const hiddenInput = selectContainer.querySelector('input[type="hidden"]');
+                    if (hiddenInput && hiddenInput.value) {
+                        const value = instrumentRegulatedMap[hiddenInput.value] || hiddenInput.value;
+                        saveFilter('instrument_regulated', value);
+                    }
+                });
+            }
+        }
+
+        // Заполняем форму значениями из URL
+        urlParams.forEach((value, key) => {
+            const input = filterForm.querySelector(`[name="${key}"]`);
+            if (input) {
+                if (input.type === 'hidden') {
+                    const select = input.closest('.custom-select');
+                    if (select) {
+                        // Для instrument_regulated преобразуем значение в текст
+                        if (key === 'instrument_regulated') {
+                            const textValue = Object.keys(instrumentRegulatedMap).find(k => instrumentRegulatedMap[k] === value);
+                            if (textValue) {
+                                const option = select.querySelector(`.custom-option[data-value="${textValue}"]`);
+                                if (option) {
+                                    option.click();
+                                }
+                            }
+                        } else {
+                            const option = select.querySelector(`.custom-option[data-value="${value}"]`);
+                            if (option) {
+                                option.click();
+                            }
+                        }
+                    }
+                } else if (input.type === 'date') {
+                    input.value = formatDateForInput(value);
+                } else {
+                    input.value = value;
+                }
+            }
+        });
+
+    });
+})();
+</script>
+
+<script>
+(function () {
+    var STICKY_COUNT = 2;
+
+    function setupStickyColumns() {
+        var wrapper = document.querySelector('.last_trades_tabs--sectional-list .table-wrapper');
+        var table = document.querySelector('.last_trades_tabs--sectional-list .custom-table-flexible');
+        if (!table) return;
+
+        // Принудительно включаем горизонтальный скролл
+        if (wrapper) {
+            wrapper.style.overflowX = 'scroll';
+        }
+
+        var headerCells = table.querySelectorAll('thead tr:first-child th');
+        var left = 0;
+
+        for (var i = 0; i < Math.min(STICKY_COUNT, headerCells.length); i++) {
+            var idx = i + 1;
+            var leftPx = left + 'px';
+            table.querySelectorAll('th:nth-child(' + idx + '), td:nth-child(' + idx + ')').forEach(function (cell) {
+                cell.style.left = leftPx;
+            });
+            left += headerCells[i].getBoundingClientRect().width;
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupStickyColumns);
+    } else {
+        setupStickyColumns();
+    }
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setupStickyColumns, 150);
+    });
+})();
+</script>
+    </div>
+
+            </div>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer--content">
+            <div class="footer--content-info">
+                <div class="footer--content-info--logo">
+                    <img src="https://ccx.kz/images/logo.svg" alt="Logo">
+
+                    <span>Қазақстанның жаңа буындағы тауар биржасы</span>
+                </div>
+
+                <div class="footer--content-info--address">
+                    <button
+    style="--btn-border-color: #C0A063; width: auto; height: auto; border-radius: 8px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--static-icon button--icon" style="width: 32px; height: 32px;"
+>
+    <i style="background-color: #C0A063; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-location "></i>
+    </button>
+                    <p>Астана қ., Сарайшық ауданы, Жұмекен Нәжімеденов көшесі, №2 ғимарат, ТЕҮ 202</p>
+                </div>
+
+                <div class="footer--content-info--work-time">
+                    <button
+    style="--btn-border-color: #C0A063; width: auto; height: auto; border-radius: 8px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--static-icon button--icon" style="width: 32px; height: 32px;"
+>
+    <i style="background-color: #C0A063; min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-clock "></i>
+    </button>
+                    <p>
+                        <strong>Биржаның жұмыс тәртібі:</strong> дс–жм: 08:30–17:30; сб–жс: демалыс.<br>
+                        <strong>Cауда өткізу уақыты:</strong> жұмыс күндері сағат 09:00–16:00.
+                    </p>
+                </div>
+
+                <div class="footer--content-info--contacts">
+                    <div class="footer--content-info--contacts-wrapper">
+                        <span>Ақпарат</span>
+
+                        <div class="footer--content-info--contacts-wrapper--numbers">
+                            <a href="tel:+77273000000">+7 7172 64 40 09</a>
+                            <a href="tel:+77273000001">+7 771 110 55 55</a>
+                        </div>
+                    </div>
+
+                    <div class="footer--content-info--contacts-wrapper">
+                        <span>Әлеуметтік желілер</span>
+
+                        <div class="footer--content-info--contacts-wrapper--links">
+                            <a href="https://www.youtube.com/@caspyccx" target="_blank" rel="noopener noreferrer">
+                                <button
+    style="--btn-border-color: #C0A063; width: 40px; height: 40px; border-radius: 8px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--static-link-icon-footer button--icon"
+>
+    <i style="background-color: white; min-width: 28px; min-height: 28px; font-size: 28px; line-height: 28px" class="icon icon-youtube "></i>
+    </button>
+                            </a>
+                            <a href="https://www.instagram.com/caspyccx/" target="_blank" rel="noopener noreferrer">
+                                <button
+    style="--btn-border-color: #C0A063; width: 40px; height: 40px; border-radius: 8px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--static-link-icon-footer button--icon"
+>
+    <i style="background-color: white; min-width: 28px; min-height: 28px; font-size: 28px; line-height: 28px" class="icon icon-instagram "></i>
+    </button>
+                            </a>
+                            <a href="https://www.facebook.com/ccx.kz/" target="_blank" rel="noopener noreferrer">
+                                <button
+    style="--btn-border-color: #C0A063; width: 40px; height: 40px; border-radius: 8px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--static-link-icon-footer button--icon"
+>
+    <i style="background-color: white; min-width: 28px; min-height: 28px; font-size: 28px; line-height: 28px" class="icon icon-facebook "></i>
+    </button>
+                            </a>
+                            <a href="https://www.linkedin.com/company/caspyccx" target="_blank" rel="noopener noreferrer">
+                                <button
+    style="--btn-border-color: #C0A063; width: 40px; height: 40px; border-radius: 8px; border-width: 1px; min-width: auto; color: inherit"
+    type="button"
+    
+    class="button button--static-link-icon-footer button--icon"
+>
+    <i style="background-color: white; min-width: 28px; min-height: 28px; font-size: 28px; line-height: 28px" class="icon icon-linkedin "></i>
+    </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer--content-links hidden-mobile">
+                <span>Ақпарат</span>
+
+                <div class="footer--content-links--list">
+                    <a href="https://ccx.kz/about/information">Биржа туралы</a>
+                    <a href="https://ccx.kz/about/corporate-governance">Корпоративтік басқару</a>
+                    <a href="https://ccx.kz/about/documentation">Құжаттама</a>
+                    <a href="https://ccx.kz/about/stock-market-arbitrage">Биржалық арбитраж</a>
+                </div>
+            </div>
+
+            <div class="footer--content-links hidden-mobile">
+                <span>Қатысушы болу</span>
+
+                <div class="footer--content-links--list">
+                    <a href="https://ccx.kz/membership/members-of-the-exchange">Биржа мүшелері</a>
+
+                    <a href="https://ccx.kz/membership/tariffs">Тарифтер</a>
+                    <a href="https://ccx.kz/membership/where-to-start">Қатысушы болу</a>
+                </div>
+            </div>
+
+            <div class="footer--content-links hidden-mobile">
+                <span>Жаңалықтар</span>
+
+                <div class="footer--content-links--list">
+                    <a href="https://ccx.kz/news/category/announcement">Хабарландырулар</a>
+                    <a href="https://ccx.kz/news/category/corporate">Жаңалықтар</a>
+                </div>
+            </div>
+
+            <div class="footer--content-links hidden-mobile">
+                <span>Қолдау</span>
+
+                <div class="footer--content-links--list">
+                    <a href="https://ccx.kz/support/contact">Байланыстар</a>
+                    <a href="https://ccx.kz/support/vacancies">Бос жұмыс орындары</a>
+                    <a href="https://ccx.kz/support/question-answer">Сұрақтар / Жауаптар</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer--bottom">
+            <span class="footer--bottom-copyright">&copy; Caspy Commodity Exchange, 2011–2026</span>
+            <a href="#" class="footer--bottom-user-agreement">Пайдаланушылық келісім</a>
+            <a href="#" class="footer--bottom-policy">Дербес деректерді өңдеу саясаты</a>
+        </div>
+    </div>
+</footer>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+    <div style="display: flex; height: 100%; flex-direction: column; justify-content: space-between">
+        <div class="mobile-overlay--header">
+            <div class="mobile-overlay--header-title">
+                <button class="back-button" id="mobileOverlayBack" style="display: none;">
+                    <i style="background-color: #1F417B; min-width: 16px; min-height: 16px; font-size: 16px; line-height: 16px" class="icon icon-reply icon"></i>
+                </button>
+                <span id="mobileOverlayTitle">Меню:</span>
+            </div>
+            <button class="mobile-overlay--header__close" id="mobileOverlayClose">
+                <i style="background-color: #999999; min-width: 26px; min-height: 26px; font-size: 26px; line-height: 26px" class="icon icon-circle-x "></i>
+            </button>
+        </div>
+
+        <div class="mobile-overlay--body" id="mobileOverlayBody" style="margin-bottom: auto">
+                            <ul class="nav-mobile__overlay-list" data-menu="main" style="display:none;">
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-0"
+                            data-title="Нарықтар"
+                                                    >
+                            <span>Нарықтар</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="https://ccx.kz/trading-and-analytics/trading-results" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда қорытындылары</span>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-2"
+                            data-title="Халықаралық сауда-саттық"
+                                                    >
+                            <span>Халықаралық сауда-саттық</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-3"
+                            data-title="Жаңалықтар"
+                                                    >
+                            <span>Жаңалықтар</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-4"
+                            data-title="Сауда және аналитика"
+                                                    >
+                            <span>Сауда және аналитика</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-5"
+                            data-title="Биржа туралы"
+                                                    >
+                            <span>Биржа туралы</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-6"
+                            data-title="Биржа мүшелері үшін ақпарат"
+                                                    >
+                            <span>Биржа мүшелері үшін ақпарат</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-7"
+                            data-title="Қолдау"
+                                                    >
+                            <span>Қолдау</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-0" style="display:none;">
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-0-0"
+                            data-title="ЖЖМ"
+                                                    >
+                            <span>ЖЖМ</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-0-1"
+                            data-title="Көмір"
+                                                    >
+                            <span>Көмір</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-0-2"
+                            data-title="Цемент"
+                                                    >
+                            <span>Цемент</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-0-0" style="display:none;">
+                                            <a href="https://ccx.kz/gsm" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Нарық және қорытындылар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/gsm/trading-rules" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда-саттық қағидалары</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/gsm/schedule" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда-саттық ақпараты</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/gsm/news" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Жаңалықтар</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-0-1" style="display:none;">
+                                            <a href="https://ccx.kz/coal/market-and-results" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Нарық және қорытындылар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/coal/trading-rules" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда-саттық қағидалары</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/coal/news" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Жаңалықтар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/coal/tools" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Құралдар</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-0-2" style="display:none;">
+                                            <a href="https://ccx.kz/cement" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Нарық және қорытындылар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/cement/trading-rules" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда-саттық қағидалары</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/cement/news" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Жаңалықтар</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-2" style="display:none;">
+                                            <a href="https://ccx.kz/international-trades/announcements-of-auctions" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда-саттық туралы хабарландырулар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/international-trades/results" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Қорытындылар</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-3" style="display:none;">
+                                            <a href="https://ccx.kz/news/category/announcement" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Хабарландырулар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/news/category/corporate" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Жаңалықтар</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-4" style="display:none;">
+                                            <a href="https://ccx.kz/trading-and-analytics/trading-results" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сауда қорытындылары</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-5" style="display:none;">
+                                            <a href="#" class="nav-mobile__overlay-list__item"
+                                                            data-submenu="main-5-0"
+                            data-title="Ақпарат"
+                                                    >
+                            <span>Ақпарат</span>
+                                                            <i style="min-width: 24px; min-height: 24px; font-size: 24px; line-height: 24px" class="icon icon-chevron-right icon"></i>
+                                                    </a>
+                                            <a href="https://ccx.kz/about/corporate-governance" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Корпоративтік басқару</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/about/documentation" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Құжаттама</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/about/stock-market-arbitrage" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Биржалық арбитраж</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-5-0" style="display:none;">
+                                            <a href="https://ccx.kz/about/information" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Компания туралы</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-6" style="display:none;">
+                                            <a href="https://ccx.kz/membership/members-of-the-exchange" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Биржа мүшелері</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/membership/where-to-start" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Қатысушы болу</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/membership/tariffs" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Тарифтер</span>
+                                                    </a>
+                                    </ul>
+                            <ul class="nav-mobile__overlay-list" data-menu="main-7" style="display:none;">
+                                            <a href="https://ccx.kz/support/contact" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Байланыстар</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/support/question-answer" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Сұрақ / Жауап</span>
+                                                    </a>
+                                            <a href="https://ccx.kz/support/vacancies" class="nav-mobile__overlay-list__item"
+                                                    >
+                            <span>Бос жұмыс орындары</span>
+                                                    </a>
+                                    </ul>
+                    </div>
+
+        <div class="mobile-overlay--footer">
+            <div class="header__actions-language">
+                <div class="language-dropdown drop-up">
+    
+    <input type="checkbox" id="toggle-lang-mobile" class="toggle-checkbox">
+    <label for="toggle-lang-mobile" class="language-selected">
+        <i style="min-width: 20px; min-height: 20px; font-size: 20px; line-height: 20px" class="icon icon-earth "></i>
+        <span class="lang-code">KZ</span>
+        <i style="min-width: 12px; min-height: 12px; font-size: 12px; line-height: 12px" class="icon icon-sort-down arrow"></i>
+    </label>
+
+    <ul class="language-options">
+                                    <li><a href="https://ccx.kz/trading-and-analytics/trading-results?date_from=2026-09-01&amp;date_to=2026-09-02&amp;page=1&amp;lang=ru">RU</a></li>
+                                                <li><a href="https://ccx.kz/trading-and-analytics/trading-results?date_from=2026-09-01&amp;date_to=2026-09-02&amp;page=1&amp;lang=en">EN</a></li>
+                                            </ul>
+</div>
+            </div>
+
+            <div>
+                <ul class="header__tools-list" style="gap: 24px">
+                                        <li class="header__tools-item">
+                        <span class="currency"><strong>USD: </strong>454</span>
+                    </li>
+                    <li class="header__tools-item">
+                        <span class="currency"><strong>EUR: </strong>508</span>
+                    </li>
+                    <li class="header__tools-item">
+                        <span class="currency"><strong>RUB: </strong>5.65</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language dropdown handler
+            const dropdown = document.querySelector('.language-dropdown');
+            if (dropdown) {
+                document.addEventListener('click', function (event) {
+                    if (!dropdown.contains(event.target)) {
+                        const checkbox = dropdown.querySelector('.toggle-checkbox');
+                        if (checkbox) {
+                            checkbox.checked = false;
+                        }
+                    }
+                });
+            }
+
+            const menuToggle = document.getElementById('menuToggle');
+            const menuContainer = document.getElementById('menuContainer');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const mainNav = document.getElementById('mainNav');
+            const internationalTradesContainer = document.getElementById('internationalTradesNavMenu');
+            const internationalTradesToggle = document.getElementById('internationalTradesToggle');
+            const coalTrigger = document.getElementById('coalTrigger');
+            const coalContent = document.getElementById('coalContent');
+            const gsmTrigger = document.getElementById('gsmTrigger');
+            const gsmContent = document.getElementById('gsmContent');
+            const cementTrigger = document.getElementById('cementTrigger');
+            const cementContent = document.getElementById('cementContent');
+
+            function updateStickyBarHeight() {
+                if (mainNav) {
+                    const bottom = mainNav.getBoundingClientRect().bottom;
+                    document.documentElement.style.setProperty('--sticky-bar-height', Math.max(0, bottom) + 'px');
+                }
+            }
+
+            if (!menuToggle || !menuContainer || !menuOverlay) {
+                console.warn('Menu elements not found');
+                return;
+            }
+
+            updateStickyBarHeight();
+            window.addEventListener('resize', updateStickyBarHeight);
+            window.addEventListener('scroll', function() {
+                if (isMenuOpen || isCoalContentOpen || isGsmContentOpen || isCementContentOpen || isInternationalTradesOpen) {
+                    updateStickyBarHeight();
+                }
+            }, { passive: true });
+
+            let isInternationalTradesOpen = false;
+            let isMenuOpen = false;
+            let isCoalContentOpen = false;
+            let isGsmContentOpen = false;
+            let isCementContentOpen = false;
+
+            if (coalTrigger && coalContent) {
+                coalTrigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeInternationalTradesMenu();
+                    closeGsmContent();
+                    closeCementContent();
+                    isCoalContentOpen = !isCoalContentOpen;
+
+                    if (isCoalContentOpen) {
+                        updateStickyBarHeight();
+                        coalContent.style.display = 'block';
+                        coalTrigger.classList.add('is-active');
+                        menuOverlay.style.display = 'block';
+                    } else {
+                        closeCoalContent();
+                    }
+                });
+            }
+
+            if (gsmTrigger && gsmContent) {
+                gsmTrigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeInternationalTradesMenu();
+                    closeCoalContent();
+                    closeCementContent();
+                    isGsmContentOpen = !isGsmContentOpen;
+
+                    if (isGsmContentOpen) {
+                        updateStickyBarHeight();
+                        gsmContent.style.display = 'block';
+                        gsmTrigger.classList.add('is-active');
+                        menuOverlay.style.display = 'block';
+                    } else {
+                        closeGsmContent();
+                    }
+                });
+            }
+
+            if (cementTrigger && cementContent) {
+                cementTrigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeInternationalTradesMenu();
+                    closeCoalContent();
+                    closeGsmContent();
+                    isCementContentOpen = !isCementContentOpen;
+
+                    if (isCementContentOpen) {
+                        updateStickyBarHeight();
+                        cementContent.style.display = 'block';
+                        cementTrigger.classList.add('is-active');
+                        menuOverlay.style.display = 'block';
+                    } else {
+                        closeCementContent();
+                    }
+                });
+            }
+
+            if (internationalTradesToggle && internationalTradesContainer) {
+                internationalTradesToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeCoalContent();
+                    closeGsmContent();
+                    closeCementContent();
+                    isInternationalTradesOpen = !isInternationalTradesOpen;
+
+                    if (isInternationalTradesOpen) {
+                        updateStickyBarHeight();
+                        internationalTradesContainer.style.display = 'block';
+                        internationalTradesToggle.classList.add('is-active');
+                        menuOverlay.style.display = 'block';
+                    } else {
+                        closeInternationalTradesMenu();
+                    }
+                });
+            }
+
+            menuToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                isMenuOpen = !isMenuOpen;
+
+                if (isMenuOpen) {
+                    updateStickyBarHeight();
+                    menuContainer.style.display = 'block';
+                    menuOverlay.style.display = 'block';
+                } else {
+                    closeMenu();
+                }
+            });
+
+            if (menuOverlay) {
+                menuOverlay.addEventListener('click', () => {
+                    closeMenu();
+                    closeInternationalTradesMenu();
+                    closeCoalContent();
+                    closeGsmContent();
+                    closeCementContent();
+                });
+            }
+
+            document.addEventListener('click', (e) => {
+                if (isMenuOpen && menuContainer && !menuContainer.contains(e.target) && menuToggle && !menuToggle.contains(e.target)) {
+                    closeMenu();
+                }
+                if (isInternationalTradesOpen && internationalTradesContainer && !internationalTradesContainer.contains(e.target) && internationalTradesToggle && !internationalTradesToggle.contains(e.target)) {
+                    closeInternationalTradesMenu();
+                }
+                if (isCoalContentOpen && coalContent && !coalContent.contains(e.target) && coalTrigger && !coalTrigger.contains(e.target)) {
+                    closeCoalContent();
+                }
+                if (isGsmContentOpen && gsmContent && !gsmContent.contains(e.target) && gsmTrigger && !gsmTrigger.contains(e.target)) {
+                    closeGsmContent();
+                }
+                if (isCementContentOpen && cementContent && !cementContent.contains(e.target) && cementTrigger && !cementTrigger.contains(e.target)) {
+                    closeCementContent();
+                }
+            });
+
+            function closeMenu() {
+                isMenuOpen = false;
+                if (menuContainer) menuContainer.style.display = 'none';
+                if (menuOverlay) menuOverlay.style.display = 'none';
+            }
+
+            function closeCoalContent() {
+                isCoalContentOpen = false;
+                if (coalContent) coalContent.style.display = 'none';
+                if (coalTrigger) coalTrigger.classList.remove('is-active');
+                hideOverlayIfNoMenus();
+            }
+
+            function closeGsmContent() {
+                isGsmContentOpen = false;
+                if (gsmContent) gsmContent.style.display = 'none';
+                if (gsmTrigger) gsmTrigger.classList.remove('is-active');
+                hideOverlayIfNoMenus();
+            }
+
+            function closeCementContent() {
+                isCementContentOpen = false;
+                if (cementContent) cementContent.style.display = 'none';
+                if (cementTrigger) cementTrigger.classList.remove('is-active');
+                hideOverlayIfNoMenus();
+            }
+
+            function closeInternationalTradesMenu() {
+                isInternationalTradesOpen = false;
+                if (internationalTradesContainer) internationalTradesContainer.style.display = 'none';
+                if (internationalTradesToggle) internationalTradesToggle.classList.remove('is-active');
+                hideOverlayIfNoMenus();
+            }
+
+            function hideOverlayIfNoMenus() {
+                if (menuOverlay && !isMenuOpen && !isCoalContentOpen && !isGsmContentOpen && !isCementContentOpen && !isInternationalTradesOpen) {
+                    menuOverlay.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+    <script>
+        window.csrfToken = "N3GDFXX8zUYCCH9u1dSQgM6Q10pAGquwN373MOVb";
+        window.appType = "production";
+    </script>
+
+        <!-- End Scripts -->
+            </body>
+</html>
